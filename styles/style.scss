@@ -1,0 +1,113 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+
+p{
+   margin-bottom: 50px;
+   font-size: 15px;
+   font-weight: 500;
+}
+
+img{
+   height: 64px;
+   width: 64px;
+}
+
+body{
+   box-sizing: border-box;
+   background-color: rgb(248, 248, 248);
+   font-family: "Poppins";
+   height: 100vh;
+   width: 100vw;
+}
+
+.container{
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+}
+
+.main_block{
+   position: relative;
+   height: 500px;
+   width: 300px;
+   border: 3px solid #000;
+   border-radius: 15px;
+   background-color: rgb(152, 241, 255); 
+   &_inner{
+      padding: 0 30px 0 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 50px;
+      
+   }
+   input{
+      margin-top: 20px;
+      width: 100%;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      background-color: #fff;
+      border-radius: 10px;
+      outline: none;
+      padding: 0 30px;
+   }
+}
+
+
+.title{
+   font-size: 25px;
+   font-weight: 700;
+}
+
+.wave-one {
+   opacity: 0.3;
+   position: absolute;
+   top: 120%;
+   left: 50%;
+   background: rgb(248, 248, 248);
+   width: 500px;
+   height: 500px;
+   margin-left: -250px;
+   margin-top: -440px;;
+   transform-origin: 50% 48%;
+   border-radius: 43%;
+   animation: drift 3000ms infinite linear;
+   z-index: 1;
+   &-two{
+      animation: drift 7000ms infinite linear;
+      opacity: 0.1;
+      z-index: 3 !important;
+   }
+
+   &-three{
+      animation: drift 5000ms infinite linear;
+      z-index: 2 !important;
+      opacity: 0.2;
+   }
+} 
+
+@keyframes drift {
+   from {
+      transform: rotate(0deg);
+   }
+   from {
+      transform: rotate(360deg);
+   }
+}
+
+.weather{
+   margin-top: 50px;
+   text-align: center;
+   &_day{
+      font-size: 20px;
+      font-weight: 400;
+   }
+}
