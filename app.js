@@ -22,8 +22,8 @@ changeCity.addEventListener('keydown', (e) =>{
 
 function requestApi(city){
    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
-   .then( await function (resp) {return resp.json()})
-   .then( await function (data){
+   .then( function (resp) {return resp.json()})
+   .then( function (data){
       console.log(data) 
 
       currentName = data.name
