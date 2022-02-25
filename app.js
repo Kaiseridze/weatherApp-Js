@@ -20,8 +20,8 @@ changeCity.addEventListener('keydown', (e) =>{
 
 
 
-async function requestApi(city){
-   await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
+function requestApi(city){
+   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
    .then( await function (resp) {return resp.json()})
    .then( await function (data){
       console.log(data) 
