@@ -21,13 +21,13 @@ changeCity.addEventListener('keydown', (e) =>{
 
 
 function requestApi(city){
-   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
+   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
    .then( function (resp) {return resp.json()})
    .then( function (data){
       console.log(data) 
 
       currentName = data.name
-      currentCity.innerHTML = `<h1 class="title">${currentName ? currentName : 'Nothing founded'}</h1>`
+      currentCity.innerHTML = `<h1 class="title">${currentName ? currentName : 'Nothing found'}</h1>`
       currentWeather = data.main.temp
       currentDescription = data.weather[0].description
       currentIcon = data.weather[0].icon
