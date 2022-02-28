@@ -3,7 +3,7 @@ let weather = document.querySelector('.weather');
 
 const mainBlock = document.querySelector('.main_block_inner');
 const changeCity = document.querySelector('#input');
-const API_KEY = '58669da6ed0e5a6c0dc04774da1f7937'
+const API_KEY = 'f436d334e0feee9b76e7326ddea56fff'
 const days = ['Sunday', 'Monday', 'Chewzday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
 let date = new Date()
@@ -24,8 +24,6 @@ function requestApi(city){
    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
    .then( function (resp) {return resp.json()})
    .then( function (data){
-      console.log(data) 
-
       currentName = data.name
       currentCity.innerHTML = `<h1 class="title">${currentName ? currentName : 'Nothing found'}</h1>`
       currentWeather = data.main.temp
